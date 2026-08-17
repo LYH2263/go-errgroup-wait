@@ -22,5 +22,5 @@ func Run(fns ...func() error) error {
 		}()
 	}
 	wg.Wait()
-	return nil // BUG: drop error
+	return first
 }
